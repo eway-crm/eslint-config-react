@@ -4,7 +4,7 @@
 ## Installation
 
 ```
-npm i --save-dev @eway-crm/eslint-config-react
+npm i --save-dev eslint @eway-crm/eslint-config-react @eway-crm/eslint-config @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-plugin-react
 ```
 
 ## Configuration
