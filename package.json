@@ -1,6 +1,6 @@
 {
   "name": "@eway-crm/eslint-config-react",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "React ESLint rules for eWay-CRM",
   "main": "index.js",
   "scripts": {
@@ -15,7 +15,7 @@
   "license": "ISC",
   "dependencies": {},
   "devDependencies": {
-    "@eway-crm/eslint-config": "^1.0.6",
+    "@eway-crm/eslint-config": "^1.0.8",
     "@typescript-eslint/eslint-plugin": "^7.1.1",
     "@typescript-eslint/parser": "^7.1.1",
     "eslint": "^8.57.0",
