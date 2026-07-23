@@ -9,14 +9,62 @@ module.exports = [
     {
         name: "@eway-crm/eslint-config-react",
         files: typeScriptFiles,
+        rules: {
+            "@typescript-eslint/no-unused-vars": [
+                "warn",
+                {
+                    args: "none",
+                    ignoreRestSiblings: true,
+                    caughtErrors: "none",
+                },
+            ],
+            "@typescript-eslint/no-unused-expressions": [
+                "error",
+                {
+                    allowShortCircuit: true,
+                    allowTernary: true,
+                    allowTaggedTemplates: true,
+                },
+            ],
+        },
+    },
+    {
+        name: "@eway-crm/eslint-config-react/react",
+        files: typeScriptFiles,
         plugins: {
             react: reactPlugin,
-            "react-hooks": reactHooksPlugin,
         },
         rules: {
             "react/self-closing-comp": "error",
+            "react/jsx-key": "error",
+            "react/jsx-no-comment-textnodes": "warn",
+            "react/jsx-no-duplicate-props": "warn",
+            "react/jsx-no-target-blank": "warn",
+            "react/jsx-no-undef": "error",
+            "react/jsx-pascal-case": ["warn", { allowAllCaps: true, ignore: [] }],
+            "react/no-children-prop": "error",
+            "react/no-danger-with-children": "warn",
+            "react/no-direct-mutation-state": "warn",
+            "react/no-is-mounted": "warn",
+            "react/no-typos": "error",
+            "react/no-unescaped-entities": "error",
+            "react/require-render-return": "error",
+        },
+    },
+    {
+        name: "@eway-crm/eslint-config-react/react-hooks",
+        files: typeScriptFiles,
+        plugins: {
+            "react-hooks": reactHooksPlugin,
+        },
+        rules: {
             "react-hooks/rules-of-hooks": "error",
-            "react-hooks/exhaustive-deps": "error",
+            "react-hooks/exhaustive-deps": [
+                "error",
+                {
+                    additionalHooks: "(useMemoWithCheckPrevDeps|useCallbackWithCheckPrevDeps)",
+                },
+            ],
         },
     },
 ];
