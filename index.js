@@ -63,7 +63,7 @@ module.exports = [
             "react-hooks": reactHooksPlugin,
         },
         rules: {
-            "react-hooks/rules-of-hooks": "error",
+            ...reactHooksPlugin.configs.flat.recommended.rules,
             "react-hooks/exhaustive-deps": [
                 "error",
                 {
