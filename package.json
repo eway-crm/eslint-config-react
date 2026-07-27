@@ -1,6 +1,6 @@
 {
   "name": "@eway-crm/eslint-config-react",
-  "version": "2.1.2",
+  "version": "2.1.3",
   "description": "React ESLint rules for eWay-CRM",
   "main": "index.js",
   "scripts": {
